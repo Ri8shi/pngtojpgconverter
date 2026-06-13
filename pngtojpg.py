@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 from PIL import Image
 
-#Convert opration
 def convert_image():
     png_path = filedialog.askopenfilename(
         title="Select PNG File",
@@ -22,18 +21,15 @@ def convert_image():
         except Exception as e:
             messagebox.showerror("Error", f"An error occurred:\n{e}")
 
-# Main Window
 root = tk.Tk()
 root.title("PNG to JPG Converter")
 root.geometry("400x250")
 root.resizable(False, False)
 root.configure(bg="#1E1E2E")
 
-# Title Label
 title_label = tk.Label(root, text="Enter a png file to convert into jpg file", font=("Helvetica", 12, "bold"), bg="#1E1E2E", fg="#E0E0E0")
 title_label.pack(pady=20)
 
-# Convert Button
 convert_btn = tk.Button(
     root, 
     text="Select PNG File",
@@ -49,7 +45,6 @@ convert_btn = tk.Button(
 )
 convert_btn.pack(pady=20)
 
-# Footer
 footer_label = tk.Label(root, text="Made by Rishi", font=("Helvetica", 9), bg="#1E1E2E", fg="#AAAAAA")
 footer_label.pack(side="bottom", pady=10)
 
